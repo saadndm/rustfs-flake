@@ -175,8 +175,8 @@ in
         RUSTFS_CONSOLE_ADDRESS = cfg.consoleAddress;
         RUST_LOG = cfg.logLevel;
         # Use %d to reference the credentials directory set by LoadCredential
-        RUSTFS_ACCESS_KEY = "file:%d/access-key";
-        RUSTFS_SECRET_KEY = "file:%d/secret-key";
+        RUSTFS_ACCESS_KEY_FILE = "%d/access-key";
+        RUSTFS_SECRET_KEY_FILE = "%d/secret-key";
       } // lib.optionalAttrs (cfg.logDirectory != null) {
         RUSTFS_OBS_LOG_DIRECTORY = cfg.logDirectory;
       } // cfg.extraEnvironmentVariables;
